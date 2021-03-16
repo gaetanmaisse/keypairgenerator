@@ -11,7 +11,7 @@ jobs:
       TERM: dumb
     steps:
       - checkout
-      - run: java src/com/keypairgenerator/Main.java
+      - run: java -Djava.security.debug="provider,engine=SecureRandom" src/com/keypairgenerator/Main.java
       - run: java src/com/keypairgenerator/Main.java
       - run: java src/com/keypairgenerator/Main.java
       - run: java src/com/keypairgenerator/Main.java

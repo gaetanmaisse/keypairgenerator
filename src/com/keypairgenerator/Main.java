@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         long startTime = System.nanoTime();
         KeyPairGenerator gen = KeyPairGenerator.getInstance("RSA");
-        SecureRandom random = new SecureRandom();
+        SecureRandom random = SecureRandom.getInstanceStrong();
         gen.initialize(4096, random);
         KeyPair keyPair = gen.generateKeyPair();
         PublicKey pubk = keyPair.getPublic();
